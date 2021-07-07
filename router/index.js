@@ -39,11 +39,7 @@ const upload = multer({
 });
 
 route.get("/", (req, res) => {
-  res.render("file", {
-    found: true,
-    title: "data.title",
-    downloadid: "data.fID",
-  });
+  res.render("home");
 });
 
 route.post("/upload", upload.single("file"), (req, res) => {
